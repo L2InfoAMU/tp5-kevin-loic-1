@@ -4,22 +4,25 @@ import util.*;
 
 
 public class BruteRasterImage implements Image{
-
     private  int width;
     private int height;
     private Color[][] colors;
 
     public BruteRasterImage(Color color, int width, int height){
-       for (int i =0; i<this.width;i++){
-           for (int j=0;j<this.height;j++){
-               colors[i][j]=color;
-           }
-        }
+        createRepresentation();
         this.width=width;
         this.height=height;
+        for (int i =0; i<width;i++){
+            for (int j=0;j<height;j++){
+                colors[i][j]=color;
+            }
+        }
     }
 
     public BruteRasterImage(Color[][] colors){
+        //this.width=colors.length;
+        //this.height=colors[0].length;
+        createRepresentation();
         this.colors=colors;
         Matrices.requiresNonNull(colors);
         Matrices.requiresNonZeroDimensions(colors);
@@ -27,7 +30,10 @@ public class BruteRasterImage implements Image{
     }
 
     public void createRepresentation(){
-        Color[][] colors = new Color[width][height];
+        width=colors.length;
+        height=colors[0].length;
+        colors = new Color[width][height];
+        System.out.println("w = " + width + "h = " + height);
     }
 
     public void setPixelColor(Color color, int x, int y){
@@ -55,18 +61,18 @@ public class BruteRasterImage implements Image{
     }
 
     public int getWidth() {
-        return colors[0].length;
+        return width;
     }
 
     public int getHeight(){
-        return colors.length;
+        return height;
     }
 
     protected void setWidth(int width){
         this.width=width;
     }
 
-    protected void setheight(int height){
+    protected void setHeight(int height){
         this.height=height;
     }
 
