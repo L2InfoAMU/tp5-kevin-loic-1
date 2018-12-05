@@ -5,7 +5,7 @@ import javafx.scene.paint.Color;
 import java.util.List;
 import java.util.Vector;
 
-public class PaletteRasterImage extends RasterImage {
+public class PaletteRasterImage extends RasterVector {
     private int[][] indexOfColors;
     private List<Color> palette;
 

@@ -1,12 +1,10 @@
 package image;
 
 import java.util.List;
-import java.util.Vector;
+
 import javafx.scene.paint.Color;
 
-public class VectorImage implements Image {
-    private int width;
-    private int height;
+public class VectorImage extends RasterVector {
     public List<Shape> shapes;
 
     public VectorImage(List<Shape> shapes, int width, int height) {
@@ -22,19 +20,4 @@ public class VectorImage implements Image {
         return Color.WHITE;
     }
 
-    public int getWidth() {
-        return width;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    protected int setWidth(int width) {
-        return this.width = width;
-    }
-
-    protected int setHeight(int height) {
-        return this.height = height;
-    }
 }

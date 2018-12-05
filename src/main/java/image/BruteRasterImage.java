@@ -4,7 +4,7 @@ import javafx.scene.paint.Color;
 import util.*;
 //implements Image
 
-public class BruteRasterImage extends RasterImage {
+public class BruteRasterImage extends RasterVector {
     private Color[][] colors;
 
     public BruteRasterImage(Color color, int width, int height) {

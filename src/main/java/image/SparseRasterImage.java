@@ -5,7 +5,7 @@ import javafx.scene.paint.Color;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SparseRasterImage extends RasterImage {
+public class SparseRasterImage extends RasterVector {
     private Point point;
     public Map<Point, Color> map;
 
