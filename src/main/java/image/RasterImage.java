@@ -31,5 +31,4 @@ public abstract class RasterImage implements Image {
 
     public abstract void setPixelColor(Color color, int x, int y);
 
-
 }
