@@ -10,6 +10,7 @@ public class LogoLISFactory implements ImageFactory {
     public Image makeImage() {
         Color dark = Color.rgb(35, 31, 32);
         Color greenblue = Color.rgb(113, 208, 199);
+        Point p =new Point(50,20);
 
         int[] xCoordinates = {60, 720, 660, 400, 0, 400, 660};
         int[] yCoordinates = {0, 60, 140, 0, 0, 140, 0};
@@ -21,6 +22,7 @@ public class LogoLISFactory implements ImageFactory {
 
         for (int i = 0; i < colors.length; i++)
             list.add(new Rectangle(xCoordinates[i], yCoordinates[i], widths[i], heights[i], colors[i]));
+           // list.add(new Cercle(50,p,Color.BLUE));
 
         return new VectorImage(list, 860, 340);
     }
